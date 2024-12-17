@@ -8,9 +8,19 @@ const colors = ["red", "aqua", "orange", "purple", "lightgreen"];
 
 const text = prompt("Write a sentence");
 
+const random = Math.floor(Math.random() * 5);
+
+const hey = "hello";
+
 const div = document.querySelector("div");
-div.innerText =text
-div.style.color="blue"
-console.log(div.innerHTML)
 
+for (let i = 0; i < text.length; i++) {
+  const random = Math.floor(Math.random() * 5);
+  div.innerHTML += `<span>${text[i]}</span>`;
+}
+const span = document.querySelectorAll("span");
 
+for (let i = 0; i < text.length; i++) {
+  const random = Math.floor(Math.random() * 5);
+  span[i].style.color = colors[random];
+}
